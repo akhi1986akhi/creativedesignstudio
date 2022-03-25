@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Design Studio</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: sans-serif;
+        }
+        .hero{
+            width:100%;
+            height:100vh;
+            background-image: url(img/water_spray_liquid_88051_1920x1080.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .logo{
+            width:100px;
+            cursor: pointer;
+        }
+        .navbar{
+            width:85%;
+            margin:5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        
+        }
+        button{
+            color:#fbfcfd;
+            padding:10px 25px;
+            background:transparent;
+            border-radius: 20px;
+            border:1px solid #fff;
+            outline: none;
+            cursor: pointer;
+            margin-right: 10px;
+
+
+        }
+        .content{
+            color:#fbfcfd;
+            position: absolute;
+            display: flex;
+            top:25%;
+            left:50%;
+            transform: translate(-50%);
+            border:rgba(75, 74, 74, 0.329) solid 1px;
+            z-index: 2;
+            background:linear-gradient(rgba(29,29,29,0.1),#148aa85b);
+        }
+        .content_img{
+            margin: 10px;
+            background: rgba(180, 178, 178, 0.1);
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            width:320px;
+            /* height:350px; */
+            backdrop-filter: blur(5px);
+            border-radius: 5px;
+        }
+        .content_img h2{
+            color:rgba(128, 128, 128, 0.575);
+            padding-bottom: 10px;
+            padding-left: 5px;
+            padding-top:5px;
+            font-family:'Times New Roman', Times, serif;
+            letter-spacing: 4px;
+            text-shadow: black 0 0 5px;
+            
+        }
+        .content_img img{
+            width:300px;
+            height:200px;
+            padding-bottom: 10px;
+            border-radius: 100% 0% 77% 23% / 76% 0% 100% 24% ;
+            transition: 0.5s;
+            padding-left: 10px;
+            padding-right: 10px;
+            opacity: 0.8;
+
+        }
+        .content_img img:hover{
+            width:300px;
+            height:200px;
+            padding-bottom: 10px;
+            /* border-radius: 100% 0% 77% 23% / 76% 0% 100% 24% ;
+            transition: 0.5s; */
+            cursor: pointer;
+            border-radius: 0px;
+            opacity:1;
+        }
+        .card_des{
+            color:rgb(129, 125, 125);
+            display: block;
+            background: rgba(180, 178, 178, 0.1);
+            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-left: 10px;
+            letter-spacing: 2px;
+            text-shadow: black 4px 2px 10px,black 6px 4px 14px, 0px 0px 2px;
+        }
+        .know_more{
+            display: flex;
+            justify-content:center;
+            width:100%;
+            margin-top:10px;
+            margin-bottom: 10px;
+        }
+
+
+        .side-bar{
+            width:50px;
+            height:100vh;
+            background:linear-gradient(#00545daf,#000729a9);
+            position:absolute;
+            right:0;
+            top:0;
+        }
+        .menu{
+            display: block;
+            width:25px;
+            margin:20px auto 0;
+            cursor: pointer;
+        }
+        .social-links img, .usefull-links img{
+            display: block;
+            width:25px;
+            margin:10px 25px 0px;
+            margin-left: 15px;
+            cursor: pointer;
+            
+        }
+        .social-links{
+            width:25px;
+            text-align: center;
+            position: absolute;
+            padding-left: 20px;
+            top:10%;
+            transform: translate(-50%);
+        }
+        .usefull-links{
+            width:50px;
+            text-align: center;
+            position: absolute;
+            bottom: 30px;
+            
+        }
+        .bubbles img{
+            width:40px;
+            animation: bubble 8s linear infinite;
+
+
+        }
+        @keyframes bubble{
+            0%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+            20%{
+
+                opacity: 1;
+            }
+            90%{
+
+                opacity: 1;
+            }
+            100%{
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+        .bubbles{
+            width:100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            bottom:20px;
+            border:solid 2px transparent;
+            margin-top: 550px;        
+        }
+        .bubbles img:nth-child(1){
+            animation-delay: 2s;
+            width: 25px;
+
+        }
+        .bubbles img:nth-child(2){
+            animation-delay: 1s;
+
+        }
+        .bubbles img:nth-child(3){
+            animation-delay: 4s;
+            width:20px;
+
+        }
+        .bubbles img:nth-child(4){
+            animation-delay: 1s;
+
+        }
+        .bubbles img:nth-child(5){
+            animation-delay: 5s;
+            width:30px;
+
+        }
+        .bubbles img:nth-child(6){
+            animation-delay: 1s;
+
+        }
+        .bubbles img:nth-child(7){
+            animation-delay: 2s;
+            width: 15px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="navbar">
+            <img src="IMG/camera logo.png" class="logo">
+            <div class="in_up">
+
+               <a href="login.html"> <button type="button"> login</button></a>
+                <a href="signup.html"><button type="button">Sign Up!</button></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_img">
+                <h2>Wedding</h2>
+                <img src="ïmg/wedding.jpg">
+                <span class="card_des">Pre-wedding, Wedding & Post-wedding Portrait shoot <br></span>
+                <div class="know_more">
+
+                    <a href="take_a_tour.html"> <button type="button">Know More</button></a>
+                </div>
+            </div>
+            <div class="content_img">
+                <h2>Event Show</h2>
+                <img src="ïmg/wp2349410-events-wallpapers.jpg">
+                <span class="card_des">Event show capturing and production with real-time<br></span>
+                <div class="know_more">
+
+                    <button type="button">Know More</button>
+                </div>
+            </div>
+            <div class="content_img">
+                <h2>Fashion</h2>
+                <img src="ïmg/fashion-photography-header.jpg">
+                <span class="card_des">Fashion-show & Model photo-shoot  <br></span>
+                <div class="know_more">
+                    <button type="button">Know More</button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="side-bar">
+            <a href="index.html"><img src="img/list.svg" class="menu"></a>
+
+            <div class="social-links">
+                <img src="IMG/whatsapp.svg">
+                <img src="IMG/twitter.svg">
+                <img src="IMG/instagram.svg">
+                <a href="contact_us.html"><img src="img/phone-solid.svg"></a>
+            </div>
+            <div class="usefull-links">
+                <img src="IMG/google.svg">
+                <img src="IMG/linkedin.svg">
+            </div>
+        </div>
+        <div class="bubbles">
+            <img src="IMG/bubble_light_blue.png">
+            <img src="IMG/bubble_light_blue.png">
+            <img src="IMG/bubble_light_blue.png">
+            <img src="IMG/bubble_light_blue.png">
+            <img src="IMG/bubble_light_blue.png">
+            <img src="IMG/bubble_light_blue.png">
+            <img src="IMG/bubble_light_blue.png">
+        </div>
+    </div>
+</body>
+</html>
